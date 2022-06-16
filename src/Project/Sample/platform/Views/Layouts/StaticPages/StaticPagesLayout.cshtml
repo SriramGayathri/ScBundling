@@ -1,0 +1,53 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using System.Web.Optimization
+@{
+    Layout = null;
+    Sitecore.Data.Items.Item contextItem = Sitecore.Context.Item;
+    Sitecore.Data.Fields.MultilistField servicesField = ((Sitecore.Data.Fields.MultilistField)contextItem.Fields["ListofServices"]);
+
+
+
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submit Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="@contextItem["Viewport"]">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon.ico" />
+    <meta name="title" content="@contextItem["MetaTitle"]" />
+    <meta name="description" content="@contextItem["MetaDescription"]" />
+    <meta name="robots" content="@contextItem["Robots"]">
+    <meta name="keywords" content="@contextItem["Keywords"]">
+    <meta name="canonical" content="@contextItem["Canonical"]">
+    <meta property="og:title" content="@contextItem["OG-Title"]">
+    <meta property="og:image" content="@contextItem["OG-Image"]">
+    <meta property="og:description" content="@contextItem["OG-Description"]">
+
+
+    @Styles.Render("~/assets/css/form")
+
+
+
+</head>
+
+<body data-bs-spy="scroll">
+
+    <div id="header">@Html.Sitecore().Placeholder("header")</div>
+    <div class="@contextItem["cssClass"]">
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    <div id="footer">@Html.Sitecore().Placeholder("footer")</div>
+
+</body>
+
+</html>
+
+@Styles.Render("~/assets/css/form")
+
+@Scripts.Render("~/assets/js/form")
+
+

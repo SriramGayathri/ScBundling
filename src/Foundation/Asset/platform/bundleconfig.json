@@ -1,0 +1,25 @@
+[
+  {
+    "outputFileName": "assets/css/form.min.css",
+    "inputFiles": [
+     
+      "assets/css/common.css",
+      "assets/css/submitForm.css"
+    ]
+  },
+  {
+    "outputFileName": "assets/js/form.min.js",
+    "inputFiles": [
+
+      "assets/js/jquery.validate.js",
+      "assets/js/jquery.validate.unobtrusive.js",
+      "assets/js/SubmitForm.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+
+]

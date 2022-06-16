@@ -1,0 +1,36 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Data.Items
+@using Sitecore.Data.Fields
+@using Sitecore.Resources.Media
+@{
+
+    Item formPage = Sitecore.Context.Item;
+    ImageField bannerImgField = ((ImageField)formPage.Fields["BannerImage"]);
+    string bannerImageUrl = bannerImgField != null && bannerImgField.MediaItem != null ? MediaManager.GetMediaUrl(bannerImgField.MediaItem) : string.Empty;
+
+}
+<div class="contactMainawrap widthControl">
+    <section class="bannerWrap pTop">
+        <div class="container">
+            <h3 class="section-title">@formPage["BannerTitle"]</h3>
+            <img class="img-fluid"
+                 src="@bannerImageUrl" />
+        </div>
+    </section>
+
+    <section class="AdressWrap">
+        <div class="container">
+            <div class="formWrap">
+                <div class="row">
+                    <div class="col-md-7 pTop">
+
+                        <div class="formBox">
+                            @Html.Sitecore().Placeholder("feedbackform")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

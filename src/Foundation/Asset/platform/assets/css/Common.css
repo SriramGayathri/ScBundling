@@ -1,0 +1,68 @@
+        
+input {
+    border-color: grey;
+    
+}
+
+textarea {
+    border-color: lightyellow;
+    
+}
+select {
+    border-color: gold;
+    
+}
+.loaderDot {
+    background-color: #ffffff;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    -webkit-animation-name: loader_animation;
+    animation-name: loader_animation;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    vertical-align: middle;
+}
+
+    .loaderDot:first-child {
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+
+    .loaderDot:nth-child(2n) {
+        -webkit-animation-delay: -0.15s;
+        animation-delay: -0.15s;
+        margin: 0 3px;
+    }
+
+.loaderLabel {
+    color: #ffffff;
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #0d67ca;
+    border-color: #0d67ca;
+}
+
+.form-floating {
+    position: relative;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
